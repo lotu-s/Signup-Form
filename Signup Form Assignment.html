@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="signupform.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style>
+  body {
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-182880589-1493334765.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>
+<title>Signup Form</title>
+<h1 class="white_text">Simple Signup Form</h1>
+</head>
+<body>
+  <form class="white_text">
+    <p> For your first and last name, capitalize the initial of your first and last name. </p>
+    <label for="fname">Enter your first name</label>
+    <input type="text" id="fname" name="fname" pattern="[A-Za-z]{1,}" required>
+    <br>
+    <label for="lname">Enter your last name</label>
+    <input type="text" id="lname" name="lname" pattern="[A-Za-z]{1,}" required>
+    <br>
+    <br>
+    <label for="bday">Enter your birthday:</label>
+    <input type="date" id="today" name="bday" required>
+    <br>
+    <br>
+    <label for="phone">Enter phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="\(?[0-9]{3}\)?[\s,-]?[0-9]{3}[\s,-]?[0-9]{4}" required>
+    <br>
+    <br>
+    <label for="email">Enter email:</label>
+    <input type="email" id="email" name="email" pattern="\w{1,}@\w{1,}\.\w{1,}" required>
+    <br>
+    <br>
+    <label for="pwd">Enter password:</label>
+    <input type="password" id="pwd" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+    <p> Your password must have a minimum length of 8 characters, one special character, one capital letter, one number and one lowercase letter.</p>
+    <button>Submit!</button>
+    <br>
+    <p>Wondering how to create a good password?</p>
+    <a class="white_text" href="https://blog.avast.com/strong-password-ideas" target="_blank">Click here!</a>
+  </form>
+</body>
+</html>
